@@ -24,6 +24,11 @@ public class CellPhoneController {
     @Autowired
    PhoneService phoneService;
    
+    /**
+     * 
+     * @Description 查询到所有手机的列表
+     * @return
+     */
     @ResponseBody
     @RequestMapping("/list")
     public List<Cellphone> listRole(){
@@ -33,6 +38,12 @@ public class CellPhoneController {
        return list;
     }
     
+    
+    /**
+     * 
+     * @Description 保存手机
+     * @param phone
+     */
     @ResponseBody
     @RequestMapping("/save")
     public void save(Cellphone phone){
@@ -45,6 +56,7 @@ public class CellPhoneController {
     public void update(Cellphone phone){
        System.out.println("helllo update");
        phoneService.update(phone); 
+       System.out.println("git test");
     }
     
     
